@@ -17,7 +17,7 @@ public class Output {
     
     // Code ANSI pour réinitialiser la couleur
     public static final String RESET = "\u001B[0m";
-
+    public static final char colorPrefix = '&';
     // Association des codes Minecraft aux codes ANSI
     private static final Map<Character, String> colorMap = new HashMap<>();
     static {
@@ -45,7 +45,7 @@ public class Output {
         StringBuilder formatted = new StringBuilder();
         for (int i = 0; i < message.length(); i++) {
             char c = message.charAt(i);
-            if (c == '§' && i < message.length() - 1) {
+            if (c == colorPrefix && i < message.length() - 1) {
                 char code = message.charAt(i + 1);
                 String ansiCode = colorMap.get(code);
                 if (ansiCode != null) {
@@ -67,7 +67,7 @@ public class Output {
         StringBuilder formatted = new StringBuilder();
         for (int i = 0; i < message.length(); i++) {
             char c = message.charAt(i);
-            formatted.append("§").append((int) (Math.random() * 10)).append(c);
+            formatted.append(colorPrefix).append((int) (Math.random() * 10)).append(c);
         }
         printWithColors(formatted.toString());
 
