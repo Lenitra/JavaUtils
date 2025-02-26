@@ -78,4 +78,20 @@ public class Output {
         ReadVar.readString("");
     }
 
+
+
+    public static void animatedTyping(String message, int delay) {
+        for (int i = 0; i < message.length(); i++) {
+            System.out.print(message.charAt(i));
+            try {
+                Thread.sleep(delay);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println();
+    }
+
+
+
 }
