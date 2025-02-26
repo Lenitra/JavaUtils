@@ -27,9 +27,6 @@ public class ReadVar {
         }
     }
 
-    public static int readInt() {
-        return readInt("");
-    }
 
     /**
      * Permet de demander à l'utilisateur de saisir un double

@@ -9,9 +9,10 @@ public class Tests {
         // System.out.println(ReadVar.readChar("Saisir un caractère : "));
 
 
-        String[] menu = {"Option 1", "Option 2", "Option 3"};
-        MenuCreator.displayMenu(menu);
-        System.out.println(MenuCreator.readChoice(menu));
+        String[] menu = {"Banane", "Cerises", "Kiwi", "Pomme", "Raisin"};
+        MenuCreator.displayMenu(menu, "---- MENU ----");
+        int choix = MenuCreator.readChoice(menu);
+        System.out.println("Vous avez choisi : " + menu[choix - 1]);
 
     }
 }
