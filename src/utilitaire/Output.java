@@ -37,6 +37,7 @@ public class Output {
         colorMap.put('d', "\u001B[95m"); // Violet clair
         colorMap.put('e', "\u001B[93m"); // Jaune
         colorMap.put('f', "\u001B[97m"); // Blanc
+        colorMap.put('r', RESET); // Blanc
         // Vous pouvez étendre cette map pour d'autres codes ou styles
     }
 
@@ -60,5 +61,16 @@ public class Output {
         System.out.println(formatted.toString());
     }
 
+
+    public static void printWithColorsRDM(String message) {
+        // pour chaque caractère du message ajouter § suivi d'un chiffre aléatoire entre 0 et 9 puis le caractère
+        StringBuilder formatted = new StringBuilder();
+        for (int i = 0; i < message.length(); i++) {
+            char c = message.charAt(i);
+            formatted.append("§").append((int) (Math.random() * 10)).append(c);
+        }
+        printWithColors(formatted.toString());
+
+    }
 
 }
