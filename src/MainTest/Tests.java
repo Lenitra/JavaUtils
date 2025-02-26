@@ -1,12 +1,13 @@
-import utils.*;
+package MainTest;
+import utils.ReadVar;
 
 public class Tests {
     public static void main(String[] args) {
-        // int entier = ReadVar.readInt("Veuillez saisir un entier : ");
-        // double decimal = ReadVar.readDouble("Veuillez saisir un double : ");
-        // String texte = ReadVar.readString("Veuillez saisir une chaîne de caractères : ");
-        // char caractere = ReadVar.readChar("Veuillez saisir un caractère : ");
-        // boolean booleen = ReadVar.readBoolean("Veuillez saisir un booléen (y/n) : ");
+        int entier = ReadVar.readInt("Veuillez saisir un entier : ");
+        double decimal = ReadVar.readDouble("Veuillez saisir un double : ");
+        String texte = ReadVar.readString("Veuillez saisir une chaîne de caractères : ");
+        char caractere = ReadVar.readChar("Veuillez saisir un caractère : ");
+        boolean booleen = ReadVar.readBoolean("Veuillez saisir un booléen (y/n) : ");
 
         // System.out.println("Entier saisi : " + entier);
         // System.out.println("Double saisi : " + decimal);

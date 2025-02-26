@@ -1,3 +1,4 @@
+package utils; // Déclaration du package utils
 
 
 public class MenuCreator { // Déclaration de la classe MenuCreator
