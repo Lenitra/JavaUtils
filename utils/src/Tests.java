@@ -1,5 +1,3 @@
-
-
 import utils.readVar;
 
 public class Tests {
