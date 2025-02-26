@@ -5,6 +5,7 @@ import java.util.InputMismatchException; // Importe l'exception InputMismatchExc
 
 public class ReadVar { // Déclaration de la classe ReadVar
 
+
     /**
      * Permet de demander à l'utilisateur de saisir un entier (int)
      * @param message : message à afficher
@@ -25,6 +26,7 @@ public class ReadVar { // Déclaration de la classe ReadVar
             }
         }
     }
+
 
     /**
      * Permet de demander à l'utilisateur de saisir un double
@@ -47,6 +49,7 @@ public class ReadVar { // Déclaration de la classe ReadVar
         }
     }
     
+
     /**
      * Permet de demander à l'utilisateur de saisir une chaîne de caractères (String)
      * @param message : message à afficher
@@ -59,6 +62,7 @@ public class ReadVar { // Déclaration de la classe ReadVar
         return sc.nextLine(); // Retourne la chaîne saisie par l'utilisateur
     }
     
+
     /**
      * Permet de demander à l'utilisateur de saisir un caractère (char)
      * @param message : message à afficher
@@ -77,6 +81,7 @@ public class ReadVar { // Déclaration de la classe ReadVar
         }
     }
     
+
     /**
      * Permet de demander à l'utilisateur de saisir un booléen (true ou false)
      * @param message : message à afficher
@@ -101,4 +106,7 @@ public class ReadVar { // Déclaration de la classe ReadVar
             }
         }
     }
+
+    
+
 }

@@ -10,9 +10,18 @@ public class Tests {
 
 
         String[] menu = {"Banane", "Cerises", "Kiwi", "Pomme", "Raisin"};
-        MenuCreator.displayMenu(menu, "---- MENU ----");
+        MenuCreator.displayMenu(menu, "---- MENU 1 ----");
         int choix = MenuCreator.readChoice(menu);
         System.out.println("Vous avez choisi : " + menu[choix - 1]);
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        choix = MenuCreator.displayMenuAndReadChoice(menu, "---- MENU 2 ----");
+        System.out.println("Vous avez choisi : " + menu[choix - 1]);
+
 
     }
 }

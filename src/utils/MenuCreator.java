@@ -2,6 +2,7 @@ package utils; // Déclaration du package utils
 
 public class MenuCreator { // Déclaration de la classe MenuCreator
 
+
     // Méthode pour afficher un menu à partir d'un tableau de chaînes (sans titre)
     public static void displayMenu(String[] menu) {
         // Boucle pour parcourir l'ensemble des éléments du tableau menu
@@ -10,6 +11,7 @@ public class MenuCreator { // Déclaration de la classe MenuCreator
             System.out.println((i + 1) + ". " + menu[i]);
         }
     }
+
 
     // Méthode pour afficher un menu avec un titre et un tableau de chaînes
     public static void displayMenu(String[] menu, String titre) {
@@ -22,6 +24,7 @@ public class MenuCreator { // Déclaration de la classe MenuCreator
         }
     }
 
+
     // Méthode pour lire le choix de l'utilisateur et valider que ce choix est correct
     public static int readChoice(String[] menu) {
         // Demande à l'utilisateur de saisir son choix en utilisant la méthode readInt de la classe ReadVar
@@ -31,11 +34,11 @@ public class MenuCreator { // Déclaration de la classe MenuCreator
             // Affiche un message d'erreur en cas de saisie invalide
             System.out.println("Erreur : Veuillez saisir un choix valide.");
             // Redemande à l'utilisateur de saisir son choix
-            choice = ReadVar.readInt("Votre choix : ");
         }
         // Retourne le choix valide de l'utilisateur
         return choice;
     }
+
 
     // Méthode combinant l'affichage du menu et la lecture du choix de l'utilisateur (sans titre)
     public static int displayMenuAndReadChoice(String[] menu) {
@@ -52,5 +55,6 @@ public class MenuCreator { // Déclaration de la classe MenuCreator
         // Lit et retourne le choix de l'utilisateur en appelant la méthode readChoice
         return readChoice(menu);
     }
+
 
 }
