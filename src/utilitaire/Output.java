@@ -1,5 +1,8 @@
 package utilitaire;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Output {
 
     public static void clear() {
@@ -9,5 +12,53 @@ public class Output {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
+
+
+    
+    // Code ANSI pour réinitialiser la couleur
+    public static final String RESET = "\u001B[0m";
+
+    // Association des codes Minecraft aux codes ANSI
+    private static final Map<Character, String> colorMap = new HashMap<>();
+    static {
+        colorMap.put('0', "\u001B[30m"); // Noir
+        colorMap.put('1', "\u001B[34m"); // Bleu foncé
+        colorMap.put('2', "\u001B[32m"); // Vert foncé
+        colorMap.put('3', "\u001B[36m"); // Aqua foncé
+        colorMap.put('4', "\u001B[31m"); // Rouge foncé
+        colorMap.put('5', "\u001B[35m"); // Violet foncé
+        colorMap.put('6', "\u001B[33m"); // Or
+        colorMap.put('7', "\u001B[37m"); // Gris clair
+        colorMap.put('8', "\u001B[90m"); // Gris foncé
+        colorMap.put('9', "\u001B[94m"); // Bleu clair
+        colorMap.put('a', "\u001B[92m"); // Vert clair
+        colorMap.put('b', "\u001B[96m"); // Aqua clair
+        colorMap.put('c', "\u001B[91m"); // Rouge clair
+        colorMap.put('d', "\u001B[95m"); // Violet clair
+        colorMap.put('e', "\u001B[93m"); // Jaune
+        colorMap.put('f', "\u001B[97m"); // Blanc
+        // Vous pouvez étendre cette map pour d'autres codes ou styles
+    }
+
+    public static void printWithColors(String message) {
+        StringBuilder formatted = new StringBuilder();
+        for (int i = 0; i < message.length(); i++) {
+            char c = message.charAt(i);
+            if (c == '§' && i < message.length() - 1) {
+                char code = message.charAt(i + 1);
+                String ansiCode = colorMap.get(code);
+                if (ansiCode != null) {
+                    formatted.append(ansiCode);
+                    i++; // Passe le caractère de code
+                    continue;
+                }
+            }
+            formatted.append(c);
+        }
+        // Réinitialisation à la fin du message
+        formatted.append(RESET);
+        System.out.println(formatted.toString());
+    }
+
 
 }
