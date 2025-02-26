@@ -73,4 +73,9 @@ public class Output {
 
     }
 
+    public static void waitUntilEnter() {
+        Output.printWithColors("Appuyez sur &4Entrée pour continuer...");
+        ReadVar.readString("");
+    }
+
 }
