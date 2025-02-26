@@ -3,7 +3,7 @@ package utils;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
-public class readVar {
+public class ReadVar {
 
     /**
      * Permet de demander à l'utilisateur de saisir un entier (int)
