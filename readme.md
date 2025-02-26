@@ -31,7 +31,7 @@ public class Main {
 }
 ```
 
-### readVar
+### Demande de saisies utilisateur
 
 ```java
 import utils.ReadVar;
