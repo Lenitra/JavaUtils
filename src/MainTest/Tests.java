@@ -1,5 +1,5 @@
 package MainTest;
-import utils.*;
+import utilitaire.*;
 
 public class Tests {
     public static void main(String[] args) {

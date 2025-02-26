@@ -1,4 +1,4 @@
-package utils; // Déclaration du package utils
+package utilitaire; // Déclaration du package
 
 public class MenuCreator { // Déclaration de la classe MenuCreator
 
@@ -34,6 +34,7 @@ public class MenuCreator { // Déclaration de la classe MenuCreator
             // Affiche un message d'erreur en cas de saisie invalide
             System.out.println("Erreur : Veuillez saisir un choix valide.");
             // Redemande à l'utilisateur de saisir son choix
+            choice = ReadVar.readInt("Votre choix : ");
         }
         // Retourne le choix valide de l'utilisateur
         return choice;
