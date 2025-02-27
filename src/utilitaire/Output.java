@@ -93,5 +93,23 @@ public class Output {
     }
 
 
+    public static void animatedColor(String message, int delaySeconds) {
+        int changeColorPerSeconds = 15;
+
+        int sleepBeforeChange = 1000 / changeColorPerSeconds;  
+
+        for (int i = 0; i < delaySeconds * changeColorPerSeconds; i++) {
+            clear();
+            printWithColorsRDM(message);
+            try {
+                Thread.sleep(sleepBeforeChange);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        clear();
+        System.out.println(message);
+    }
+
 
 }
