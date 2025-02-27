@@ -100,6 +100,8 @@ public class Output {
 
         for (int i = 0; i < delaySeconds * changeColorPerSeconds; i++) {
             clear();
+            progressBar(i, delaySeconds * changeColorPerSeconds);
+            System.out.println();
             printWithColorsRDM(message);
             try {
                 Thread.sleep(sleepBeforeChange);
@@ -111,5 +113,28 @@ public class Output {
         System.out.println(message);
     }
 
+
+    public static void progressBar(int progress, int total) {
+        if (total <= 0) {
+            throw new IllegalArgumentException("La valeur totale doit être supérieure à zéro.");
+        }
+        int barLength = 20;
+        int progressLength = (int) ((double) progress / total * barLength);
+        StringBuilder progressBar = new StringBuilder();
+        progressBar.append('[');
+        for (int i = 0; i < progressLength; i++) {
+            progressBar.append('=');
+        }
+        for (int i = progressLength; i < barLength; i++) {
+            progressBar.append(' ');
+        }
+        progressBar.append(']');
+        
+        // Retour chariot pour réécrire la ligne en cours
+        System.out.print("\r" + progressBar.toString());
+        System.out.printf(" %d/%d (%.2f%%)", progress, total, (double) progress / total * 100);
+        System.out.flush();
+    }
+    
 
 }

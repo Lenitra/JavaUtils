@@ -27,16 +27,17 @@ public class Tests {
         // choix = MenuCreator.displayMenuAndReadChoice(menu, "---- MENU 2 ----");
         // System.out.println("Vous avez choisi : " + menu[choix - 1]);
 
-        Output.printWithColors("Ceci est un message coloré &1bleu &2vert &3cyan &4rouge &5magenta &6jaune &7blanc &8gris");
+        // Output.printWithColors("Ceci est un message coloré &1bleu &2vert &3cyan &4rouge &5magenta &6jaune &7blanc &8gris");
 
-        Output.printWithColorsRDM("Ceci est un message coloré aléatoirement");
+        // Output.printWithColorsRDM("Ceci est un message coloré aléatoirement");
 
-        Output.waitUntilEnter();
-
+        // Output.waitUntilEnter();
         
         Output.animatedColor("Ceci est un message qui change de couleur pensant 5 secondes", 5);
         
-        Output.animatedTyping("Ceci est un message qui s'affiche lettre par lettre", 50);
+        // Output.animatedTyping("Ceci est un message qui s'affiche lettre par lettre", 50);
+
+        // Output.progressBar(10, 100);
 
     }
 }
