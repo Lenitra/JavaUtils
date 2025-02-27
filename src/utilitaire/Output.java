@@ -100,8 +100,8 @@ public class Output {
 
         for (int i = 0; i < delaySeconds * changeColorPerSeconds; i++) {
             clear();
-            progressBar(i, delaySeconds * changeColorPerSeconds);
-            System.out.println();
+            // progressBar(i, delaySeconds * changeColorPerSeconds);
+            // System.out.println();
             printWithColorsRDM(message);
             try {
                 Thread.sleep(sleepBeforeChange);
